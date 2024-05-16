@@ -6,7 +6,7 @@ import Link from "next/link"
     <footer className="text-gray-800 py-8 dark:bg-gray-800 dark:text-gray-200 shadow-sm">
       <div className="container mx-auto px-4 md:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
         <div className="mb-4 md:mb-0">
-          <h3 className="text-xl font-bold">Aadil's Portfolio</h3>
+          <h3 className="text-xl font-bold">Aadil&apos;s Portfolio</h3>
           <p className="text-gray-600 mt-2 font-bold dark:text-gray-400">Experience & Projects</p>
         </div>
         <nav className="flex items-center space-x-6">

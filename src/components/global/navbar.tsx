@@ -2,7 +2,7 @@ import { AArrowUp, Menu } from "lucide-react";
 import Link from "next/link"
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger, } from "@/components/ui/dialog"
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger, } from "@/components/ui/dialog"
 
  export default function Navbar() {
   return (
@@ -10,7 +10,7 @@ import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, Di
       <div>
         <Link className="flex items-center" href="#">
           <AArrowUp className="w-10 h-10 text-black dark:text-white" />
-          <span className="ml-2 text-2xl font-semibold text-black dark:text-white">Aadil's Portfolio</span>
+          {/* <span className="ml-2 text-2xl font-semibold text-black dark:text-white">Aadil's Portfolio</span> */}
         </Link>
       </div>
       <div>
@@ -37,12 +37,27 @@ import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, Di
       </div>
       <div>
         <div className="lg:flex hidden items-center space-x-4">
-          <Button className="text-sm" variant="outline">
-            Login
-          </Button>
-          <Button className="text-sm" variant="outline">
+
+          <Dialog>
+              <DialogTrigger asChild>
+              <Button className="text-sm" variant="outline">Contact</Button>
+              </DialogTrigger>
+              <DialogContent className="w-full max-w-md">
+                <DialogHeader>
+                  <DialogTitle>Contact Info</DialogTitle>
+                </DialogHeader>
+                  <DialogDescription>
+                    <div className="font-semibold text-black">Aadil Alli</div>
+                    <div className="font-semibold text-black">646-338-4179</div>
+                    <div className="font-semibold text-black">
+                      <a href="mailto:aadil15alli@gmail.com">aadil15alli@gmail.com</a>
+                    </div>
+                  </DialogDescription>
+              </DialogContent>
+            </Dialog>
+          {/* <Button className="text-sm" variant="outline">
             Register
-          </Button>
+          </Button> */}
         </div>
         <div className="lg:hidden flex items-center">
           <Sheet>
