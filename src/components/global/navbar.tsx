@@ -10,7 +10,7 @@ import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, D
       <div>
         <Link className="flex items-center" href="#">
           <AArrowUp className="w-10 h-10 text-black dark:text-white" />
-          {/* <span className="ml-2 text-2xl font-semibold text-black dark:text-white">Aadil's Portfolio</span> */}
+          {/* <span className="ml-2 text-2xl font-semibold text-black dark:text-white">Aadil&apos;s Portfolio</span> */}
         </Link>
       </div>
       <div>
@@ -78,7 +78,7 @@ import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, D
                     className="flex items-center gap-2 text-lg font-semibold"
                   >
                     <AArrowUp className="h-6 w-6" />
-                    <span className="sr-only">Aadil's Portfolio</span>
+                    <span className="sr-only">Aadil&apos;s Portfolio</span>
                   </Link>
                   <Link href="/" className="hover:text-foreground">
                     Home
