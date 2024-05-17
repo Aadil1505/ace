@@ -8,7 +8,7 @@ import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, D
   return (
     <div className="flex items-center justify-around h-16 px-4 bg-white dark:bg-gray-800 shadow-sm">
       <div>
-        <Link className="flex items-center" href="#">
+        <Link className="flex items-center" href="/">
           <AArrowUp className="w-10 h-10 text-black dark:text-white" />
           {/* <span className="ml-2 text-2xl font-semibold text-black dark:text-white">Aadil&apos;s Portfolio</span> */}
         </Link>
