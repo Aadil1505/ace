@@ -69,7 +69,7 @@ export default function HeroSectionGradientBackground() {
               invested at any user-specified time period. This project sent me spiraling down a rabbit hole of 
               ideas and projects that inspired me to learn more about coding and how I could use it to create. 
               Today I am a Computer Science Technician at Hofstra University where I build, fix, and optimize 
-              the department's software and hardware, collaborate with peers and coworkers on projects to ensure 
+              the department&apos;s software and hardware, collaborate with peers and coworkers on projects to ensure 
               a functional tech ecosystem, research systems and products that could increase workflow, and document 
               code and guides for newly imlplemented systems. I am also actively pursuing a B.S. in Computer Science at Hofstra University.
               </p>
