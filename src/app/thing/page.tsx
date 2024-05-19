@@ -7,8 +7,6 @@ import TextReveal from "@/components/ui/text-reveal";
 import { HeroParallax } from "@/components/ui/hero-parallax";
 import Link from "next/link";
 import Image from "next/image";
-import Ripple from "@/components/ui/ripple";
-import LinearGradient from "@/components/ui/linear-gradient";
 
 
 export default function HeroSectionGradientBackground() {
