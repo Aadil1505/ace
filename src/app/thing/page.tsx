@@ -5,7 +5,8 @@ import { Github, Building2Icon, ThumbsUpIcon, Users2Icon } from "lucide-react";
 import OrbitingCirclesDemo from "@/components/global/globe"
 import TextReveal from "@/components/ui/text-reveal";
 import { HeroParallax } from "@/components/ui/hero-parallax";
-import Link from "next/link";
+import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger, } from "@/components/ui/alert-dialog"
+import { BrainCogIcon, PackageIcon, TrophyIcon, UsersIcon, ZapIcon, ArrowRight } from "lucide-react";import Link from "next/link";
 import Image from "next/image";
 
 
@@ -109,6 +110,58 @@ export default function HeroSectionGradientBackground() {
 
 
 
+  const content = [
+    {
+      title: "Collaborative Editing",
+      description:
+        "Work together in real time with your team, clients, and stakeholders. Collaborate on documents, share ideas, and make decisions quickly. With our platform, you can streamline your workflow and increase productivity.",
+      content: (
+        <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
+          Collaborative Editing
+        </div>
+      ),
+    },
+    {
+      title: "Real time changes",
+      description:
+        "See changes as they happen. With our platform, you can track every modification in real time. No more confusion about the latest version of your project. Say goodbye to the chaos of version control and embrace the simplicity of real-time updates.",
+      content: (
+        <div className="h-full w-full  flex items-center justify-center text-white">
+          <Image
+            src="/linear.webp"
+            width={300}
+            height={300}
+            className="h-full w-full object-cover"
+            alt="linear board demo"
+          />
+        </div>
+      ),
+    },
+    {
+      title: "Version control",
+      description:
+        "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
+      content: (
+        <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--orange-500),var(--yellow-500))] flex items-center justify-center text-white">
+          Version control
+        </div>
+      ),
+    },
+    {
+      title: "Running out of content",
+      description:
+        "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
+      content: (
+        <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
+          Running out of content
+        </div>
+      ),
+    },
+  ];
+  
+
+
+
   return (
     <>
     <motion.div
@@ -135,7 +188,24 @@ export default function HeroSectionGradientBackground() {
                   </p>
                 </div>
                 <div className="mt-8 gap-3 flex justify-center">
-                  <Button size={"lg"}>Take a look</Button>
+                  
+                  <AlertDialog>
+                    <AlertDialogTrigger asChild>
+                      <Button size={"lg"}>Take a look</Button>
+                    </AlertDialogTrigger>
+                    <AlertDialogContent>
+                      <AlertDialogHeader>
+                        <AlertDialogTitle>Nothing to see here</AlertDialogTitle>
+                        <AlertDialogDescription>
+                          Literally just go scroll and look.
+                        </AlertDialogDescription>
+                      </AlertDialogHeader>
+                      <AlertDialogFooter>
+                        <AlertDialogCancel>Ok, fine</AlertDialogCancel>
+                      </AlertDialogFooter>
+                    </AlertDialogContent>
+                  </AlertDialog>
+
                   <Button size={"lg"} variant={"outline"} asChild>
                     <Link href="https://github.com/Aadil1505">
                       GitHub&nbsp;<Github />
@@ -173,7 +243,7 @@ export default function HeroSectionGradientBackground() {
               Today I am a Computer Science Technician at Hofstra University where I build, fix, and optimize 
               the department&apos;s software and hardware, collaborate with peers and coworkers on projects to ensure 
               a functional tech ecosystem, research systems and products that could increase workflow, and document 
-              code and guides for newly imlplemented systems. I am also actively pursuing a B.S. in Computer Science at Hofstra University.
+              code and guides for newly implemented systems. I am also actively pursuing a B.S. in Computer Science at Hofstra University.
               </p>
             </div>
             <div className="space-y-6 lg:space-y-10">
@@ -231,6 +301,115 @@ export default function HeroSectionGradientBackground() {
       {/* End Icon Blocks */}
 
       <HeroParallax products={products}/>
+
+      {/* Icon Blocks */}
+      <div className="max-w-2xl text-center mx-auto py-8">
+        <div className="mt-5 max-w-2xl flex justify-center items-center">
+          <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
+            Project Info
+          </h1>
+        </div>
+      </div>
+      
+      <div className="container py-12 lg:py-16">
+        <div className="max-w-4xl mx-auto">
+          {/* Grid */}
+          <div className="grid md:grid-cols-2 gap-6 lg:gap-12">
+            <div className="space-y-6 lg:space-y-10">
+              {/* Icon Block */}
+              <div className="flex">
+                <ArrowRight className="flex-shrink-0 mt-2 h-8 w-8" />
+                <div className="ms-5 sm:ms-8">
+                  <h3 className="text-base sm:text-lg font-semibold">
+                    Creative minds
+                  </h3>
+                  <p className="mt-1 text-muted-foreground">
+                    We choose our teams carefully. Our people are the secret to
+                    great work.
+                  </p>
+                </div>
+              </div>
+              {/* End Icon Block */}
+              {/* Icon Block */}
+              <div className="flex">
+                <ArrowRight className="flex-shrink-0 mt-2 h-8 w-8" />
+                <div className="ms-5 sm:ms-8">
+                  <h3 className="text-base sm:text-lg font-semibold">
+                    Effortless updates
+                  </h3>
+                  <p className="mt-1 text-muted-foreground">
+                    Benefit from automatic updates to all boards any time you
+                    need to make a change to your website.
+                  </p>
+                </div>
+              </div>
+              {/* End Icon Block */}
+              {/* Icon Block */}
+              <div className="flex">
+                <ArrowRight className="flex-shrink-0 mt-2 h-8 w-8" />
+                <div className="ms-5 sm:ms-8">
+                  <h3 className="text-base sm:text-lg font-semibold">
+                    Strong empathy
+                  </h3>
+                  <p className="mt-1 text-muted-foreground">
+                    We&apos;ve user tested our own process by shipping over 1k
+                    products for clients.
+                  </p>
+                </div>
+              </div>
+              {/* End Icon Block */}
+            </div>
+            {/* End Col */}
+            <div className="space-y-6 lg:space-y-10">
+              {/* Icon Block */}
+              <div className="flex">
+                <ArrowRight className="flex-shrink-0 mt-2 h-8 w-8" />
+                <div className="ms-5 sm:ms-8">
+                  <h3 className="text-base sm:text-lg font-semibold">
+                    Conquer the best
+                  </h3>
+                  <p className="mt-1 text-muted-foreground">
+                    We stay lean and help your product do one thing well.
+                  </p>
+                </div>
+              </div>
+              {/* End Icon Block */}
+              {/* Icon Block */}
+              <div className="flex">
+                <ArrowRight className="flex-shrink-0 mt-2 h-8 w-8" />
+                <div className="ms-5 sm:ms-8">
+                  <h3 className="text-base sm:text-lg font-semibold">
+                    Designing for people
+                  </h3>
+                  <p className="mt-1 text-muted-foreground">
+                    We actively pursue the right balance between functionality
+                    and aesthetics, creating delightful experiences.
+                  </p>
+                </div>
+              </div>
+              {/* End Icon Block */}
+              {/* Icon Block */}
+              <div className="flex">
+                <ArrowRight className="flex-shrink-0 mt-2 h-8 w-8" />
+                <div className="ms-5 sm:ms-8">
+                  <h3 className="text-base sm:text-lg font-semibold">
+                    Simple and affordable
+                  </h3>
+                  <p className="mt-1 text-muted-foreground">
+                    From boarding passes to movie tickets, there&apos;s pretty
+                    much nothing you can&apos;t do.
+                  </p>
+                </div>
+              </div>
+              {/* End Icon Block */}
+            </div>
+            {/* End Col */}
+          </div>
+          {/* End Grid */}
+        </div>
+      </div>
+      {/* End Icon Blocks */}
+
       
     </motion.div>
     </>
