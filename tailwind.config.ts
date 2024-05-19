@@ -84,12 +84,30 @@ const config: Config = {
             backgroundPosition: "350% 50%, 350% 50%",
           },
         },
+        meteor: {
+          "0%": { transform: "rotate(215deg) translateX(0)", opacity: "1" },
+          "70%": { opacity: "1" },
+          "100%": {
+            transform: "rotate(215deg) translateX(-500px)",
+            opacity: "0",
+          },
+        },
+        ripple: {
+          "0%, 100%": {
+            transform: "translate(-50%, -50%) scale(1)",
+          },
+          "50%": {
+            transform: "translate(-50%, -50%) scale(0.9)",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         aurora: "aurora 60s linear infinite",
         orbit: "orbit calc(var(--duration)*1s) linear infinite",
+        meteor: "meteor 5s linear infinite",
+        ripple: "ripple 3400ms ease infinite",
       },
     },
   },

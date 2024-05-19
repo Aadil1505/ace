@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger, } from "@/components/ui/dialog"
 import { Tabs } from "@/components/ui/tabs";
 
 export default function TabsDemo() {
@@ -10,7 +11,19 @@ export default function TabsDemo() {
       value: "product",
       content: (
         <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-gray-200 to-gray-400">
-          <p>Product Tab</p>
+          <Dialog >
+            <DialogTrigger><p>Product Tab</p></DialogTrigger>
+            <DialogContent clasName="min-w-full h-screen">
+              <DialogHeader>
+                <DialogTitle className="flex justify-center items-center text-red-600">Are you absolutely sure?</DialogTitle>
+                <DialogDescription>
+                  This action cannot be undone. This will permanently delete your account
+                  and remove your data from our servers.
+                </DialogDescription>
+              </DialogHeader>
+            </DialogContent>
+          </Dialog>
+
           <DummyContent />
         </div>
       ),
