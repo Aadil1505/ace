@@ -6,11 +6,17 @@ import OrbitingCirclesDemo from "@/components/global/globe"
 import TextReveal from "@/components/ui/text-reveal";
 import { HeroParallax } from "@/components/ui/hero-parallax";
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger, } from "@/components/ui/alert-dialog"
-import { BrainCogIcon, PackageIcon, TrophyIcon, UsersIcon, ZapIcon, ArrowRight } from "lucide-react";import Link from "next/link";
+import { BrainCogIcon, PackageIcon, TrophyIcon, UsersIcon, ZapIcon, ArrowRight } from "lucide-react";
+import { WavyBackground } from "@/components/ui/wavy-background";
+import { FlipWords } from "@/components/ui/flip-words";
+import Link from "next/link";
 import Image from "next/image";
 
 
 export default function HeroSectionGradientBackground() {
+
+  const words = ["Projects", "Experience", "Work"];
+
 
   const products = [
     {
@@ -174,6 +180,8 @@ export default function HeroSectionGradientBackground() {
       }}
     >
       <div className="relative overflow-hidden py-24 lg:py-32">
+      <WavyBackground className="max-w-4xl mx-auto pb-40">
+
         <div className="relative z-10">
             <div className="container py-10 lg:py-16">
               <div className="max-w-2xl text-center mx-auto">
@@ -215,6 +223,8 @@ export default function HeroSectionGradientBackground() {
               </div>
             </div>
         </div>
+      </WavyBackground>
+      
       </div>
       <div className="flex justify-center py-8">
         <OrbitingCirclesDemo />
@@ -306,11 +316,12 @@ export default function HeroSectionGradientBackground() {
       <div className="max-w-2xl text-center mx-auto py-8">
         <div className="mt-5 max-w-2xl flex justify-center items-center">
           <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
-            Project Info
+          Some Of My <br/>
+          <FlipWords words={words} />
           </h1>
         </div>
       </div>
-      
+
       <div className="container py-12 lg:py-16">
         <div className="max-w-4xl mx-auto">
           {/* Grid */}

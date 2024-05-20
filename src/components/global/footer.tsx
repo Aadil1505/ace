@@ -1,65 +1,41 @@
-import { Linkedin, Twitter, Github } from "lucide-react";
 import Link from "next/link"
+import { Home, ShoppingBag, Info } from 'lucide-react'
 
- export default function Footer() {
+export default function Component() {
   return (
-    <footer className="text-gray-800 py-8 dark:bg-gray-800 dark:text-gray-200 shadow-sm">
-      <div className="container mx-auto px-4 md:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
-        <div className="mb-4 md:mb-0">
-          <h3 className="text-xl font-bold">Aadil&apos;s Portfolio</h3>
-          <p className="text-gray-600 mt-2 font-bold dark:text-gray-400">Experience & Projects</p>
-        </div>
-        <nav className="flex items-center space-x-6">
-          <Link
-            className="text-gray-600 hover:text-gray-800 font-semibold transition-colors dark:text-gray-400 dark:hover:text-gray-200"
-            href="#"
-          >
+    <footer className="w-full py-6 ">
+      <div className="container flex flex-col gap-4 items-center px-4 md:flex-row md:justify-between md:px-6 lg:gap-6">
+        <div className="flex gap-4 text-center md:order-2 md:gap-8 md:text-left">
+          <Link className="flex items-center gap-2 text-sm font-medium tracking-wide uppercase" href="/">
+            <Home className="w-5 h-5" />
             Home
           </Link>
-          <Link
-            className="text-gray-600 hover:text-gray-800 font-semibold transition-colors dark:text-gray-400 dark:hover:text-gray-200"
-            href="#"
-          >
-            About
+          <Link className="flex items-center gap-2 text-sm font-medium tracking-wide uppercase" href="/">
+            <ShoppingBag className="w-5 h-5" />
+            Cart
           </Link>
-          <Link
-            className="text-gray-600 hover:text-gray-800 font-semibold transition-colors dark:text-gray-400 dark:hover:text-gray-200"
-            href="#"
-          >
-            Projects
+          <Link className="flex items-center gap-2 text-sm font-medium tracking-wide uppercase" href="/">
+            <Info className="w-5 h-5" />
+            Contact us
           </Link>
-          <Link
-            className="text-gray-600 hover:text-gray-800 font-semibold transition-colors dark:text-gray-400 dark:hover:text-gray-200"
-            href="#"
-          >
-            Contact
+        </div>
+        <div className="flex flex-col gap-2 text-center md:order-1 md:text-left lg:gap-4">
+          <p className="text-xs tracking-wide/relaxed">© 2024 Ripe Inc. All rights reserved.</p>
+          <p className="text-xs tracking-wide/relaxed">Made with love in New York.</p>
+        </div>
+        <div className="flex items-center justify-center gap-4 text-sm md:order-3 md:gap-8">
+          <Link className="text-gray-500 hover:text-gray-900 dark:hover:text-gray-50" href="#">
+            Terms
           </Link>
-        </nav>
-        <div className="flex items-center space-x-4 mt-4 md:mt-0">
-          <Link
-            className="text-gray-600 hover:text-gray-800 font-semibold transition-colors dark:text-gray-400 dark:hover:text-gray-200"
-            href="#"
-            target="_blank"
-          >
-            <Linkedin className="h-6 w-6" />
+          <Link className="text-gray-500 hover:text-gray-900 dark:hover:text-gray-50" href="#">
+            Privacy
           </Link>
-          <Link
-            className="text-gray-600 hover:text-gray-800 font-semibold transition-colors dark:text-gray-400 dark:hover:text-gray-200"
-            href="#"
-            target="_blank"
-          >
-            <Twitter className="h-6 w-6" />
-          </Link>
-          <Link
-            className="text-gray-600 hover:text-gray-800 font-semibold transition-colors dark:text-gray-400 dark:hover:text-gray-200"
-            href="#"
-            target="_blank"
-          >
-            <Github className="h-6 w-6" />
+          <Link className="text-gray-500 hover:text-gray-900 dark:hover:text-gray-50" href="#">
+            Policy
           </Link>
         </div>
       </div>
     </footer>
   )
- }
- 
+}
+
