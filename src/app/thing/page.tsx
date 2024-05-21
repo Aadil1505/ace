@@ -9,6 +9,7 @@ import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, 
 import { BrainCogIcon, PackageIcon, TrophyIcon, UsersIcon, ZapIcon, ArrowRight } from "lucide-react";
 import { WavyBackground } from "@/components/ui/wavy-background";
 import { FlipWords } from "@/components/ui/flip-words";
+import RetroGrid from "@/components/ui/retro-grid";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -180,8 +181,6 @@ export default function HeroSectionGradientBackground() {
       }}
     >
       <div className="relative overflow-hidden py-24 lg:py-32">
-      <WavyBackground className="max-w-4xl mx-auto pb-40">
-
         <div className="relative z-10">
             <div className="container py-10 lg:py-16">
               <div className="max-w-2xl text-center mx-auto">
@@ -196,7 +195,6 @@ export default function HeroSectionGradientBackground() {
                   </p>
                 </div>
                 <div className="mt-8 gap-3 flex justify-center">
-                  
                   <AlertDialog>
                     <AlertDialogTrigger asChild>
                       <Button size={"lg"}>Take a look</Button>
@@ -223,10 +221,8 @@ export default function HeroSectionGradientBackground() {
               </div>
             </div>
         </div>
-      </WavyBackground>
-      
       </div>
-      <div className="flex justify-center py-8">
+      <div className="flex justify-center">
         <OrbitingCirclesDemo />
       </div>
       <div className="z-10 flex min-h-[16rem] items-center justify-center">

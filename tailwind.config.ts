@@ -100,6 +100,10 @@ const config: Config = {
             transform: "translate(-50%, -50%) scale(0.9)",
           },
         },
+        grid: {
+          "0%": { transform: "translateY(-50%)" },
+          "100%": { transform: "translateY(0)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -108,6 +112,7 @@ const config: Config = {
         orbit: "orbit calc(var(--duration)*1s) linear infinite",
         meteor: "meteor 5s linear infinite",
         ripple: "ripple 3400ms ease infinite",
+        grid: "grid 15s linear infinite",
       },
     },
   },
